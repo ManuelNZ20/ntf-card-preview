@@ -1,0 +1,133 @@
+:root {
+  /* ## Colors */
+  /* ### Primary */
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  /* ### Neutral */
+  /* (main BG) */
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  /* (card BG) */
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  /* (line) */
+  --very-dark-blue: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  /* Font */
+  --font-general: "Outfit", sans-serif;
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 18px;
+  font-family: var(--font-general);
+}
+body {
+  background-color: var(--very-dark-blue-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--soft-blue);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+#main {
+  width: 90%;
+  max-width: 330px;
+  height: auto;
+  box-shadow: 0px 20px 20px 20px var(--very-dark-blue-main);
+  border-radius: 15px;
+}
+.main {
+  background-color: var(--very-dark-blue-card);
+  border-radius: 15px;
+  padding: 20px;
+  gap: 1.3rem;
+  box-shadow: 0px 25px 10px 0px var(--very-dark-blue-main);
+}
+.img-top {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+.img-top img {
+  width: 100%;
+  display: block;
+}
+
+.img-overlay {
+  position: absolute;
+  left: 0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  background-color:hsla(178, 100%, 50%, 0.5);
+  cursor: pointer;
+  display: none;
+}
+.img-overlay img {
+  position: absolute;
+  width: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.img-top:hover .img-overlay {
+  display: block;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.paragraph {
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.info-date {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ntf-user {
+  color: var(--cyan);
+  font-size: 0.9rem;
+}
+.ethereum {
+  vertical-align: bottom;
+}
+.date {
+  font-size: 0.8rem;
+}
+.clock {
+  height: 65%;
+}
+
+.info-user {
+  flex-direction: row;
+  border-top: 2px solid var(--very-dark-blue);
+  padding: 20px 0px 10px;
+  align-items: center;
+  gap: 10px;
+}
+
+.image-user {
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid var(--white);
+  border-radius: 50%;
+}
+
+.credit-user {
+  font-size: 0.8rem;
+}
+.change:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
